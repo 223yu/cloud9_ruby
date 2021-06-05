@@ -31,7 +31,7 @@ class TodolistsController < ApplicationController
     redirect_to todolist_path(list.id)
   end
 
-  def destroy
+  def destroy #データ削除
     list = List.find(params[:id])
     list.destroy
     redirect_to todolists_path
